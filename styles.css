@@ -266,3 +266,28 @@ img { max-width: 100%; display: block; }
   * { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Experience & Education ---------- */
+.timeline { display: grid; }
+.exp__item { display: grid; grid-template-columns: 190px 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid var(--border); }
+.timeline .exp__item:first-child { border-top: none; padding-top: 4px; }
+.exp__date { font-family: var(--mono); font-size: 12.5px; color: var(--text-faint); letter-spacing: .3px; }
+.exp__company { font-weight: 700; font-size: 1.05rem; margin-top: 6px; }
+.exp__place { font-size: 13px; color: var(--text-soft); margin-top: 2px; }
+.exp__role { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--accent); margin-bottom: 12px; }
+.exp__list { list-style: none; display: grid; gap: 10px; }
+.exp__list li { position: relative; padding-left: 20px; font-size: 14.5px; color: var(--text-soft); }
+.exp__list li::before { content: '▹'; position: absolute; left: 0; color: var(--accent); }
+
+.edu { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 44px; }
+.edu__card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow); transition: transform .28s ease, border-color .28s ease; }
+.edu__card:hover { transform: translateY(-4px); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+.edu__meta { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-bottom: 10px; }
+.edu__school { font-weight: 700; font-size: 1.08rem; }
+.edu__degree { font-size: 14px; color: var(--text-soft); margin: 4px 0 12px; }
+.edu__course { font-size: 13px; color: var(--text-faint); line-height: 1.75; }
+
+@media (max-width: 760px) {
+  .exp__item { grid-template-columns: 1fr; gap: 12px; padding: 22px 0; }
+  .edu { grid-template-columns: 1fr; }
+}
